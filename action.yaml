@@ -1,13 +1,8 @@
 name: Create RIO build
 description: 'creates a build on the platform and saves build details in file'
 runs:
-  using: "composite"
+  using: composite
   steps:
     - id: create
       run: .github/scripts/create_build.sh -f .github/scripts/flask_helloworld/build.yaml
       shell: bash
-    uses: stefanzweifel/git-auto-commit-action@v4
-    with:
-      commit_message: Apply automatic changes
-      branch: master
-      commit_options: '--no-verify --signoff'
