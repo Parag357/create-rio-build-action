@@ -4,5 +4,5 @@ runs:
   using: composite
   steps:
     - id: create
-      run: .github/scripts/create_build.sh -f .github/scripts/flask_helloworld/build.yaml
+      run: .github/scripts/create_build/create_build.sh -f .github/scripts/app_config/build.yaml
       shell: bash
