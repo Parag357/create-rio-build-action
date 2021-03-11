@@ -4,5 +4,5 @@ runs:
   using: composite
   steps:
     - id: create
-      run: .github/scripts/create_build/create_build.sh -f .github/scripts/app_config/build.yaml
+      run: python .github/scripts/create_build.py .github/app_config/build.yaml
       shell: bash
